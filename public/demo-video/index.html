@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1280, height=720, initial-scale=1.0">
+  <title>Stylus Lab Demo Video</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+</head>
+<body data-duration="15" class="clip">
+  <script>
+    // HyperFrames timeline registry
+    window.__timelines = window.__timelines || {};
+  </script>
+  
+  <div data-hf-id="hf-r9n2" id="app" data-composition-id="app" data-width="1280" data-height="720" data-start="0" data-duration="15">
+    
+    <!-- ================= SCENE 1: DRAWING (0s - 5s) ================= -->
+    <div data-hf-id="hf-lio4" id="scene-1" class="scene">
+      <header data-hf-id="hf-fs6p" class="top-bar">
+        <div data-hf-id="hf-nb0h" class="left-section"><span data-hf-id="hf-onu9" class="brand">STYLUS_OS</span></div>
+        <div data-hf-id="hf-35hw" class="right-section"><span data-hf-id="hf-aig7" class="nav-link">GITHUB @eduardomv2</span><span data-hf-id="hf-78yx" class="lang-toggle">EN</span></div>
+      </header>
+
+      <div data-hf-id="hf-fgvm" class="app-body">
+        <aside data-hf-id="hf-842t" class="sidebar">
+          <div data-hf-id="hf-xyni" class="sidebar-header">
+            <h2 data-hf-id="hf-8nc1" class="title">DIAGNOSTICS</h2><span data-hf-id="hf-t15g" class="version">V2.0.4-STYLUS</span>
+          </div>
+          <nav data-hf-id="hf-e59r" class="nav-menu">
+            <div data-hf-id="hf-lav9" class="nav-item active"><span data-hf-id="hf-xguw" class="nav-icon">✏️</span><span data-hf-id="hf-9yjh" class="nav-label">Drawing</span></div>
+            <div data-hf-id="hf-5avh" class="nav-item"><span data-hf-id="hf-igd0" class="nav-icon">🏋️</span><span data-hf-id="hf-mfxs" class="nav-label">Exercises</span></div>
+            <div data-hf-id="hf-m2rl" class="nav-item"><span data-hf-id="hf-h133" class="nav-icon">🎯</span><span data-hf-id="hf-1fjj" class="nav-label">Precision</span></div>
+            <div data-hf-id="hf-n9oo" class="nav-item"><span data-hf-id="hf-hsvd" class="nav-icon">⚡</span><span data-hf-id="hf-ou19" class="nav-label">Performance</span></div>
+          </nav>
+        </aside>
+
+        <main data-hf-id="hf-30rz" class="main-content">
+          <div data-hf-id="hf-oq05" class="tab-view">
+            <div data-hf-id="hf-p89e" class="canvas-container">
+              <div data-hf-id="hf-of5p" class="coord-overlay">COORD: <span data-hf-id="hf-3d85">0, 0</span></div>
+              <div data-hf-id="hf-jh5i" class="toolbar-overlay">
+                <div data-hf-id="hf-xqtb" class="toolbar-group">
+                  <div data-hf-id="hf-fz45" class="tool-btn"><div data-hf-id="hf-9iqo" class="size-dot" style="width: 2px; height: 2px;"></div></div>
+                  <div data-hf-id="hf-1q9p" class="tool-btn active"><div data-hf-id="hf-yhs6" class="size-dot" style="width: 5px; height: 5px;"></div></div>
+                  <div data-hf-id="hf-gee1" class="tool-btn"><div data-hf-id="hf-lan4" class="size-dot" style="width: 12px; height: 12px;"></div></div>
+                </div>
+                <div data-hf-id="hf-1wof" class="toolbar-separator"></div>
+                <div data-hf-id="hf-qc5b" class="toolbar-group">
+                  <div data-hf-id="hf-992s" class="color-btn" style="background-color: #FFFFFF;"></div>
+                  <div data-hf-id="hf-s5si" class="color-btn active" style="background-color: #A855F7;"></div>
+                  <div data-hf-id="hf-mx20" class="color-btn" style="background-color: #4ADE80;"></div>
+                </div>
+                <div data-hf-id="hf-k34f" class="toolbar-separator"></div>
+                <div data-hf-id="hf-804b" class="btn-clear">[ CLEAR ]</div>
+              </div>
+              
+              <svg data-hf-id="hf-jr4r" class="drawing-svg" viewBox="0 0 1000 600" preserveAspectRatio="xMidYMid slice">
+                <path data-hf-id="hf-c00k" id="s1-path" class="stroke-path" d="M 200,300 Q 300,100 500,300 T 800,300" fill="none" stroke="#A855F7" stroke-width="5" stroke-linecap="round" />
+                <circle data-hf-id="hf-z62k" id="s1-cursor" class="cursor" cx="200" cy="300" r="8" fill="#FFFFFF" />
+                <circle data-hf-id="hf-v80g" id="s1-glow" class="cursor-glow" cx="200" cy="300" r="20" fill="rgba(168, 85, 247, 0.4)" />
+              </svg>
+            </div>
+
+            <div data-hf-id="hf-3t5p" class="metric-grid">
+              <div data-hf-id="hf-swxr" class="metric-card">
+                <div data-hf-id="hf-nwim" class="metric-header">
+                  <span data-hf-id="hf-y91f" class="metric-label">PRESSURE</span>
+                  <div data-hf-id="hf-xgfb" class="metric-value-row"><span data-hf-id="hf-p6n1" class="metric-value" style="color: #A855F7;">0.00%</span></div>
+                </div>
+                <div data-hf-id="hf-b4dl" class="meter-track"><div data-hf-id="hf-cx8v" id="s1-pressure" class="meter-fill"></div></div>
+              </div>
+              <div data-hf-id="hf-djun" class="metric-card">
+                <div data-hf-id="hf-q88y" class="metric-header">
+                  <span data-hf-id="hf-171w" class="metric-label">TILT_X / TILT_Y</span>
+                  <div data-hf-id="hf-he6f" class="metric-value-row"><span data-hf-id="hf-1ovh" class="metric-value" style="color: #A855F7;">45.0° / 12.0°</span></div>
+                </div>
+                <div data-hf-id="hf-zaot" class="meter-track"><div data-hf-id="hf-0gl2" class="meter-fill" style="width: 50%;"></div></div>
+              </div>
+              <div data-hf-id="hf-d5jm" class="metric-card">
+                <div data-hf-id="hf-qmjz" class="metric-header">
+                  <span data-hf-id="hf-8zhv" class="metric-label">POLLING RATE</span>
+                  <div data-hf-id="hf-gzve" class="metric-value-row"><span data-hf-id="hf-w8uo" class="metric-value" style="color: #A855F7;">240 HZ</span></div>
+                </div>
+                <div data-hf-id="hf-0hlw" class="meter-track"><div data-hf-id="hf-0pjx" class="meter-fill" style="width: 80%;"></div></div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+
+    <!-- ================= SCENE 2: PRECISION (5s - 10s) ================= -->
+    <div data-hf-id="hf-we5r" id="scene-2" class="scene">
+      <header data-hf-id="hf-s8kl" class="top-bar">
+        <div data-hf-id="hf-yzyt" class="left-section"><span data-hf-id="hf-frtx" class="brand">STYLUS_OS</span></div>
+        <div data-hf-id="hf-r73g" class="right-section"><span data-hf-id="hf-7fk7" class="nav-link">GITHUB @eduardomv2</span><span data-hf-id="hf-92cd" class="lang-toggle">EN</span></div>
+      </header>
+
+      <div data-hf-id="hf-d33q" class="app-body">
+        <aside data-hf-id="hf-cfzt" class="sidebar">
+          <div data-hf-id="hf-s1pu" class="sidebar-header">
+            <h2 data-hf-id="hf-noz9" class="title">DIAGNOSTICS</h2><span data-hf-id="hf-9r1o" class="version">V2.0.4-STYLUS</span>
+          </div>
+          <nav data-hf-id="hf-mjwv" class="nav-menu">
+            <div data-hf-id="hf-mvdn" class="nav-item"><span data-hf-id="hf-smi8" class="nav-icon">✏️</span><span data-hf-id="hf-9hdd" class="nav-label">Drawing</span></div>
+            <div data-hf-id="hf-kvui" class="nav-item"><span data-hf-id="hf-rhpo" class="nav-icon">🏋️</span><span data-hf-id="hf-lrt4" class="nav-label">Exercises</span></div>
+            <div data-hf-id="hf-tl09" class="nav-item active"><span data-hf-id="hf-yvnj" class="nav-icon">🎯</span><span data-hf-id="hf-5w5r" class="nav-label">Precision</span></div>
+            <div data-hf-id="hf-khjh" class="nav-item"><span data-hf-id="hf-253x" class="nav-icon">⚡</span><span data-hf-id="hf-wbwh" class="nav-label">Performance</span></div>
+          </nav>
+        </aside>
+
+        <main data-hf-id="hf-rjrj" class="main-content">
+          <div data-hf-id="hf-pzax" class="tab-view">
+            <div data-hf-id="hf-wxue" class="canvas-container">
+              <div data-hf-id="hf-40nz" class="coord-overlay">TARGETS HIT: <span data-hf-id="hf-kv5x" id="s2-hit-count">0 / 3</span></div>
+              
+              <svg data-hf-id="hf-7x3v" class="drawing-svg" viewBox="0 0 1000 600" preserveAspectRatio="xMidYMid slice">
+                <!-- Target 1 -->
+                <g data-hf-id="hf-x39z" id="target-1" transform="translate(300, 200)">
+                  <circle data-hf-id="hf-cjaw" class="target-circle" cx="0" cy="0" r="30" />
+                  <circle data-hf-id="hf-l1jg" class="target-center" cx="0" cy="0" r="4" />
+                </g>
+                <!-- Target 2 -->
+                <g data-hf-id="hf-ey7c" id="target-2" transform="translate(700, 150)">
+                  <circle data-hf-id="hf-t2mo" class="target-circle" cx="0" cy="0" r="30" />
+                  <circle data-hf-id="hf-khlw" class="target-center" cx="0" cy="0" r="4" />
+                </g>
+                <!-- Target 3 -->
+                <g data-hf-id="hf-djrs" id="target-3" transform="translate(500, 450)">
+                  <circle data-hf-id="hf-rvpl" class="target-circle" cx="0" cy="0" r="30" />
+                  <circle data-hf-id="hf-jaot" class="target-center" cx="0" cy="0" r="4" />
+                </g>
+                
+                <circle data-hf-id="hf-qmn4" id="s2-cursor" class="cursor" cx="500" cy="300" r="8" fill="#FFFFFF" />
+                <circle data-hf-id="hf-fq2k" id="s2-glow" class="cursor-glow" cx="500" cy="300" r="20" fill="rgba(168, 85, 247, 0.4)" />
+              </svg>
+            </div>
+
+            <div data-hf-id="hf-70j5" class="metric-grid">
+              <div data-hf-id="hf-cr8l" class="metric-card">
+                <div data-hf-id="hf-r0v0" class="metric-header">
+                  <span data-hf-id="hf-u8vx" class="metric-label">ACCURACY</span>
+                  <div data-hf-id="hf-glkd" class="metric-value-row"><span data-hf-id="hf-bafk" class="metric-value" style="color: #22C55E;">100%</span></div>
+                </div>
+                <div data-hf-id="hf-03av" class="meter-track"><div data-hf-id="hf-e7hg" class="meter-fill" style="width: 100%; background: #22C55E;"></div></div>
+              </div>
+              <div data-hf-id="hf-fjds" class="metric-card">
+                <div data-hf-id="hf-rf61" class="metric-header">
+                  <span data-hf-id="hf-wkim" class="metric-label">JITTER</span>
+                  <div data-hf-id="hf-jdpk" class="metric-value-row"><span data-hf-id="hf-yp8m" class="metric-value" style="color: #A855F7;">0.2mm</span></div>
+                </div>
+                <div data-hf-id="hf-1a7y" class="meter-track"><div data-hf-id="hf-erru" class="meter-fill" style="width: 10%;"></div></div>
+              </div>
+              <div data-hf-id="hf-f52r" class="metric-card">
+                <div data-hf-id="hf-rth2" class="metric-header">
+                  <span data-hf-id="hf-rcu1" class="metric-label">AVG TIME</span>
+                  <div data-hf-id="hf-izej" class="metric-value-row"><span data-hf-id="hf-jscs" id="s2-time-metric" class="metric-value" style="color: #A855F7;">-- ms</span></div>
+                </div>
+                <div data-hf-id="hf-0vwx" class="meter-track"><div data-hf-id="hf-3esg" id="s2-time-fill" class="meter-fill" style="width: 0%;"></div></div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+
+    <!-- ================= SCENE 3: PERFORMANCE (10s - 15s) ================= -->
+    <div data-hf-id="hf-q8fy" id="scene-3" class="scene">
+      <header data-hf-id="hf-tfho" class="top-bar">
+        <div data-hf-id="hf-06vw" class="left-section"><span data-hf-id="hf-gyr0" class="brand">STYLUS_OS</span></div>
+        <div data-hf-id="hf-q06d" class="right-section"><span data-hf-id="hf-7196" class="nav-link">GITHUB @eduardomv2</span><span data-hf-id="hf-a99g" class="lang-toggle">EN</span></div>
+      </header>
+
+      <div data-hf-id="hf-dher" class="app-body">
+        <aside data-hf-id="hf-dmww" class="sidebar">
+          <div data-hf-id="hf-sg0v" class="sidebar-header">
+            <h2 data-hf-id="hf-ovwc" class="title">DIAGNOSTICS</h2><span data-hf-id="hf-8k4l" class="version">V2.0.4-STYLUS</span>
+          </div>
+          <nav data-hf-id="hf-m5lu" class="nav-menu">
+            <div data-hf-id="hf-logk" class="nav-item"><span data-hf-id="hf-rfl5" class="nav-icon">✏️</span><span data-hf-id="hf-aoag" class="nav-label">Drawing</span></div>
+            <div data-hf-id="hf-la5j" class="nav-item"><span data-hf-id="hf-qasl" class="nav-icon">🏋️</span><span data-hf-id="hf-kkw1" class="nav-label">Exercises</span></div>
+            <div data-hf-id="hf-pniu" class="nav-item"><span data-hf-id="hf-yhci" class="nav-icon">🎯</span><span data-hf-id="hf-5huq" class="nav-label">Precision</span></div>
+            <div data-hf-id="hf-urxc" class="nav-item active"><span data-hf-id="hf-3c10" class="nav-icon">⚡</span><span data-hf-id="hf-xitk" class="nav-label">Performance</span></div>
+          </nav>
+        </aside>
+
+        <main data-hf-id="hf-r5gi" class="main-content">
+          <div data-hf-id="hf-r680" class="tab-view">
+            <div data-hf-id="hf-xc5f" class="canvas-container">
+              <div data-hf-id="hf-qu0w" class="coord-overlay">LATENCY TEST: <span data-hf-id="hf-mci5" style="color: #22C55E;">ACTIVE</span></div>
+              
+              <svg data-hf-id="hf-ggn2" class="drawing-svg" viewBox="0 0 1000 600" preserveAspectRatio="none">
+                <!-- Grid lines -->
+                <line data-hf-id="hf-k6pd" class="graph-grid" x1="0" y1="150" x2="1000" y2="150" />
+                <line data-hf-id="hf-97ob" class="graph-grid" x1="0" y1="300" x2="1000" y2="300" />
+                <line data-hf-id="hf-b66z" class="graph-grid" x1="0" y1="450" x2="1000" y2="450" />
+                <!-- Oscilloscope wave -->
+                <!-- We'll make it wide and animate it horizontally to look like a live graph -->
+                <g data-hf-id="hf-7g69" id="s3-wave">
+                  <path data-hf-id="hf-u6mb" class="graph-path" d="M 0,300 L 100,280 L 200,320 L 300,250 L 400,350 L 500,290 L 600,310 L 700,200 L 800,400 L 900,280 L 1000,300 L 1100,280 L 1200,320 L 1300,250 L 1400,350 L 1500,290 L 1600,310 L 1700,200 L 1800,400 L 1900,280 L 2000,300" />
+                </g>
+              </svg>
+            </div>
+
+            <div data-hf-id="hf-87g8" class="metric-grid">
+              <div data-hf-id="hf-cmx3" class="metric-card" style="border-color: #22C55E;">
+                <div data-hf-id="hf-s7s3" class="metric-header">
+                  <span data-hf-id="hf-j8yb" class="metric-label">POLLING RATE</span>
+                  <div data-hf-id="hf-il3i" class="metric-value-row"><span data-hf-id="hf-75xu" id="s3-polling" class="metric-value" style="color: #22C55E;">0 HZ</span></div>
+                </div>
+                <div data-hf-id="hf-22u0" class="meter-track"><div data-hf-id="hf-qvvp" id="s3-polling-fill" class="meter-fill" style="background: #22C55E; width: 0%;"></div></div>
+              </div>
+              <div data-hf-id="hf-eqrq" class="metric-card">
+                <div data-hf-id="hf-sm34" class="metric-header">
+                  <span data-hf-id="hf-vt6y" class="metric-label">EVENT DROPS</span>
+                  <div data-hf-id="hf-i6sh" class="metric-value-row"><span data-hf-id="hf-lfu7" class="metric-value" style="color: #A855F7;">0%</span></div>
+                </div>
+                <div data-hf-id="hf-1oiz" class="meter-track"><div data-hf-id="hf-p7sb" class="meter-fill" style="width: 0%;"></div></div>
+              </div>
+              <div data-hf-id="hf-ecgp" class="metric-card">
+                <div data-hf-id="hf-mnhp" class="metric-header">
+                  <span data-hf-id="hf-kbx4" class="metric-label">RAW LATENCY</span>
+                  <div data-hf-id="hf-kyxo" class="metric-value-row"><span data-hf-id="hf-w2x5" class="metric-value" style="color: #A855F7;">1.2 ms</span></div>
+                </div>
+                <div data-hf-id="hf-2vg2" class="meter-track"><div data-hf-id="hf-bzbx" class="meter-fill" style="width: 2%;"></div></div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+
+  </div>
+
+  <script>
+    const tl = gsap.timeline({ repeat: -1 });
+
+    // === SCENE 1: DRAWING ===
+    // Entrance: Just make scene-1 visible at start
+    tl.set("#scene-1", { visibility: "visible" }, 0);
+    
+    // Animate drawing path
+    tl.to("#s1-path", { strokeDashoffset: 0, duration: 4, ease: "power1.inOut" }, 0.5);
+    
+    // Show cursor
+    tl.to("#s1-cursor, #s1-glow", { opacity: 1, duration: 0.2 }, 0.5);
+    
+    // Move cursor (roughly approximates the SVG path)
+    tl.to("#s1-cursor, #s1-glow", { x: 100, y: -200, duration: 1.33, ease: "power1.inOut" }, 0.5);
+    tl.to("#s1-cursor, #s1-glow", { x: 300, y: 0, duration: 1.33, ease: "power1.inOut" }, 1.83);
+    tl.to("#s1-cursor, #s1-glow", { x: 600, y: 0, duration: 1.34, ease: "power1.inOut" }, 3.16);
+    
+    // Pressure bar
+    tl.to("#s1-pressure", { width: "80%", duration: 0.8, ease: "power1.inOut" }, 0.5);
+    tl.to("#s1-pressure", { width: "30%", duration: 1.2, ease: "power1.inOut" }, 1.3);
+    tl.to("#s1-pressure", { width: "95%", duration: 1.2, ease: "power1.inOut" }, 2.5);
+    tl.to("#s1-pressure", { width: "10%", duration: 0.8, ease: "power1.inOut" }, 3.7);
+
+    // Hide cursor
+    tl.to("#s1-cursor, #s1-glow", { opacity: 0, duration: 0.2 }, 4.5);
+
+
+    // === TRANSITION 1 to 2 ===
+    // Scene 2 Entrance: slide from right
+    tl.set("#scene-2", { visibility: "visible" }, 5.0);
+    tl.from("#scene-2", { x: 1280, duration: 0.6, ease: "power3.inOut" }, 5.0);
+    // Scene 1 Exit: slide to left
+    tl.to("#scene-1", { x: -1280, duration: 0.6, ease: "power3.inOut" }, 5.0);
+
+
+    // === SCENE 2: PRECISION ===
+    // Cursor appears in center
+    tl.to("#s2-cursor, #s2-glow", { opacity: 1, duration: 0.2 }, 5.6);
+    
+    // Move to Target 1 (300, 200) from (500, 300) -> dx:-200, dy:-100
+    tl.to("#s2-cursor, #s2-glow", { x: -200, y: -100, duration: 0.4, ease: "power2.inOut" }, 6.0);
+    // Hit Target 1
+    tl.set("#target-1", { className: "+=target-hit" }, 6.4);
+    tl.set("#s2-hit-count", { innerHTML: "1 / 3" }, 6.4);
+    
+    // Move to Target 2 (700, 150) -> dx:400, dy:-50 from Target 1, so absolute x:200, y:-150
+    tl.to("#s2-cursor, #s2-glow", { x: 200, y: -150, duration: 0.5, ease: "power2.inOut" }, 6.8);
+    // Hit Target 2
+    tl.set("#target-2", { className: "+=target-hit" }, 7.3);
+    tl.set("#s2-hit-count", { innerHTML: "2 / 3" }, 7.3);
+    
+    // Move to Target 3 (500, 450) -> absolute x:0, y:150
+    tl.to("#s2-cursor, #s2-glow", { x: 0, y: 150, duration: 0.4, ease: "power2.inOut" }, 7.8);
+    // Hit Target 3
+    tl.set("#target-3", { className: "+=target-hit" }, 8.2);
+    tl.set("#s2-hit-count", { innerHTML: "3 / 3" }, 8.2);
+
+    // Update Average Time metric
+    tl.set("#s2-time-metric", { innerHTML: "185 ms" }, 8.2);
+    tl.to("#s2-time-fill", { width: "85%", duration: 0.3, ease: "power2.out" }, 8.2);
+
+
+    // === TRANSITION 2 to 3 ===
+    // Scene 3 Entrance: slide from right
+    tl.set("#scene-3", { visibility: "visible" }, 10.0);
+    tl.from("#scene-3", { x: 1280, duration: 0.6, ease: "power3.inOut" }, 10.0);
+    // Scene 2 Exit: slide to left
+    tl.to("#scene-2", { x: -1280, duration: 0.6, ease: "power3.inOut" }, 10.0);
+
+
+    // === SCENE 3: PERFORMANCE ===
+    // Polling rate spins up to 240
+    let rate = { val: 0 };
+    tl.to(rate, { 
+      val: 240, 
+      duration: 1.5, 
+      ease: "power2.out",
+      onUpdate: function() {
+        document.getElementById("s3-polling").innerHTML = Math.floor(rate.val) + " HZ";
+      }
+    }, 10.6);
+    tl.to("#s3-polling-fill", { width: "100%", duration: 1.5, ease: "power2.out" }, 10.6);
+
+    // Live Graph sweeps left continuously
+    tl.to("#s3-wave", { x: -1000, duration: 4, ease: "none" }, 10.6);
+
+
+    // Register the master timeline
+    window.__timelines["app"] = tl;
+  </script>
+</body>
+</html>
