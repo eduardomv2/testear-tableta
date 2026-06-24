@@ -1,73 +1,43 @@
-<div align="center">
-  <h1>🖋️ Stylus Lab (TabletTest)</h1>
-  <p><strong>The ultimate diagnostic suite for digital creators and hardware enthusiasts.</strong></p>
+# Stylus Lab (TabletTest)
 
-  <p>
-    <a href="https://github.com/eduardomv2"><img src="https://img.shields.io/badge/Developed%20by-eduardomv2-A855F7?style=for-the-badge&logo=github" alt="Author"></a>
-    <img src="https://img.shields.io/badge/Svelte-FF3E00?style=for-the-badge&logo=svelte&logoColor=white" alt="Svelte">
-    <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript">
-    <img src="https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E" alt="Vite">
-  </p>
-</div>
+A high-performance, web-based diagnostic application to evaluate the capabilities of graphics tablets and styluses directly in the browser.
 
-<br />
+> [!NOTE]
+> Este es un proyecto de uso personal. Si te resulta útil, eres totalmente libre de usarlo, modificarlo o adaptarlo como desees.
 
-**Stylus Lab** is a high-performance, web-based diagnostic application designed to evaluate the true capabilities of your graphics tablet or stylus directly in the browser. Without installing any additional drivers or third-party software, you can test hardware limits such as input latency, pressure sensitivity, tilt detection, and stroke jitter using the native Canvas API and modern Web Pointer Events.
+## Features
 
-Built with an "Obsidian Technical" aesthetic, the UI is hyper-minimalist, brutalist, and built for maximum speed and readability.
+- **Free Calligraphy & Drawing Sensors:** Real-time monitoring of pressure and tilt.
+- **Precision Targets:** Hand-eye coordination and hardware accuracy testing (Aim Lab style).
+- **Latency & Polling Rate:** Oscilloscope-style visualization of polling rates up to 240Hz+.
+- **Guided Exercises:** Stroke jitter and line smoothness tracing.
+- **Native Web API:** Leverages PointerEvents and Canvas 2D for maximum telemetry accuracy.
 
----
+## Screenshots
 
-## 🚀 Key Features
+| Landing Page | Drawing Canvas |
+|:---:|:---:|
+| ![Landing Page](./screenshots/landing.png) | ![Drawing Canvas](./screenshots/drawing.png) |
 
-* **Free Calligraphy & Drawing Sensors:** Test the responsiveness of your pen in real-time. Dynamically monitor pressure (`%`) and tilt (`X/Y`) while drawing smoothly on the canvas.
-* **Precision Targets (Aim Lab style):** Evaluate your hand-eye coordination and hardware accuracy. Tap appearing targets and get instant telemetry on average time, deviation in pixels, and overall accuracy.
-* **Ultra-Low Latency Testing:** An oscilloscope-style moving graph visualizes the raw hardware polling rate (up to `240Hz+`). Check for event drops and calculate exact latency from physical touch to browser registration.
-* **Guided Exercises:** Trace circles, spirals, and zigzags to measure line jitter and stroke smoothness when drawing slowly or at complex angles.
-* **Native Web Technologies:** Achieves native-like performance using HTML5 Canvas 2D, `getCoalescedEvents()`, and `PointerEvent` APIs to capture the rawest hardware data possible.
-* **Cinematic Demo:** Features a fully native HTML/CSS/GSAP embedded 60fps animation on the landing page, completely removing the need for heavy MP4 video files.
+| Precision Targets | Latency & Polling |
+|:---:|:---:|
+| ![Precision Targets](./screenshots/precision.png) | ![Latency & Polling](./screenshots/performance.png) |
 
-## Tech Stack
+## Development
 
-- **Framework:** [Svelte 5](https://svelte.dev/)
-- **Build Tool:** [Vite](https://vitejs.dev/)
-- **Language:** TypeScript
-- **Styling:** Pure Vanilla CSS (CSS Variables, Flexbox/Grid)
-- **Animation:** [GSAP](https://gsap.com/) (for the interactive landing page demo)
-- **Internationalization:** Custom reactive `i18n` store (ES / EN)
-
-##  Local Development
-
-If you want to run Stylus Lab locally to test your own hardware or contribute to the code:
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/eduardomv2/testear-tableta.git
-   cd testear-tableta
-   ```
-
-2. **Install dependencies**
+1. **Install dependencies:**
    ```bash
    npm install
    ```
 
-3. **Run the development server**
+2. **Run dev server:**
    ```bash
    npm run dev
    ```
 
-4. **Build for production**
+3. **Build:**
    ```bash
    npm run build
    ```
 
-##  Deployment (Vercel)
-
-This project is fully optimized to be deployed on platforms like Vercel or Netlify. 
-Since it is a statically generated Vite/Svelte SPA, Vercel will automatically detect the framework and deploy it in seconds. 
-Just connect your repository and click **Deploy**.
-
-## 🤝 Contributing
-Contributions are always welcome! Feel free to open an issue or submit a Pull Request if you want to add new diagnostic tests or improve the UI.
-
-
+Developed by [@eduardomv2](https://github.com/eduardomv2).
