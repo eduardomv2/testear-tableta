@@ -1,47 +1,73 @@
-# Svelte + TS + Vite
+<div align="center">
+  <h1>🖋️ Stylus Lab (TabletTest)</h1>
+  <p><strong>The ultimate diagnostic suite for digital creators and hardware enthusiasts.</strong></p>
 
-This template should help get you started developing with Svelte and TypeScript in Vite.
+  <p>
+    <a href="https://github.com/eduardomv2"><img src="https://img.shields.io/badge/Developed%20by-eduardomv2-A855F7?style=for-the-badge&logo=github" alt="Author"></a>
+    <img src="https://img.shields.io/badge/Svelte-FF3E00?style=for-the-badge&logo=svelte&logoColor=white" alt="Svelte">
+    <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript">
+    <img src="https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E" alt="Vite">
+  </p>
+</div>
 
-## Recommended IDE Setup
+<br />
 
-[VS Code](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode).
+**Stylus Lab** is a high-performance, web-based diagnostic application designed to evaluate the true capabilities of your graphics tablet or stylus directly in the browser. Without installing any additional drivers or third-party software, you can test hardware limits such as input latency, pressure sensitivity, tilt detection, and stroke jitter using the native Canvas API and modern Web Pointer Events.
 
-## Need an official Svelte framework?
+Built with an "Obsidian Technical" aesthetic, the UI is hyper-minimalist, brutalist, and built for maximum speed and readability.
 
-Check out [SvelteKit](https://github.com/sveltejs/kit#readme), which is also powered by Vite. Deploy anywhere with its serverless-first approach and adapt to various platforms, with out of the box support for TypeScript, SCSS, and Less, and easily-added support for mdsvex, GraphQL, PostCSS, Tailwind CSS, and more.
+---
 
-## Technical considerations
+## 🚀 Key Features
 
-**Why use this over SvelteKit?**
+* **Free Calligraphy & Drawing Sensors:** Test the responsiveness of your pen in real-time. Dynamically monitor pressure (`%`) and tilt (`X/Y`) while drawing smoothly on the canvas.
+* **Precision Targets (Aim Lab style):** Evaluate your hand-eye coordination and hardware accuracy. Tap appearing targets and get instant telemetry on average time, deviation in pixels, and overall accuracy.
+* **Ultra-Low Latency Testing:** An oscilloscope-style moving graph visualizes the raw hardware polling rate (up to `240Hz+`). Check for event drops and calculate exact latency from physical touch to browser registration.
+* **Guided Exercises:** Trace circles, spirals, and zigzags to measure line jitter and stroke smoothness when drawing slowly or at complex angles.
+* **Native Web Technologies:** Achieves native-like performance using HTML5 Canvas 2D, `getCoalescedEvents()`, and `PointerEvent` APIs to capture the rawest hardware data possible.
+* **Cinematic Demo:** Features a fully native HTML/CSS/GSAP embedded 60fps animation on the landing page, completely removing the need for heavy MP4 video files.
 
-- It brings its own routing solution which might not be preferable for some users.
-- It is first and foremost a framework that just happens to use Vite under the hood, not a Vite app.
+## Tech Stack
 
-This template contains as little as possible to get started with Vite + TypeScript + Svelte, while taking into account the developer experience with regards to HMR and intellisense. It demonstrates capabilities on par with the other `create-vite` templates and is a good starting point for beginners dipping their toes into a Vite + Svelte project.
+- **Framework:** [Svelte 5](https://svelte.dev/)
+- **Build Tool:** [Vite](https://vitejs.dev/)
+- **Language:** TypeScript
+- **Styling:** Pure Vanilla CSS (CSS Variables, Flexbox/Grid)
+- **Animation:** [GSAP](https://gsap.com/) (for the interactive landing page demo)
+- **Internationalization:** Custom reactive `i18n` store (ES / EN)
 
-Should you later need the extended capabilities and extensibility provided by SvelteKit, the template has been structured similarly to SvelteKit so that it is easy to migrate.
+##  Local Development
 
-**Why `global.d.ts` instead of `compilerOptions.types` inside `jsconfig.json` or `tsconfig.json`?**
+If you want to run Stylus Lab locally to test your own hardware or contribute to the code:
 
-Setting `compilerOptions.types` shuts out all other types not explicitly listed in the configuration. Using triple-slash references keeps the default TypeScript setting of accepting type information from the entire workspace, while also adding `svelte` and `vite/client` type information.
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/eduardomv2/testear-tableta.git
+   cd testear-tableta
+   ```
 
-**Why include `.vscode/extensions.json`?**
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-Other templates indirectly recommend extensions via the README, but this file allows VS Code to prompt the user to install the recommended extension upon opening the project.
+3. **Run the development server**
+   ```bash
+   npm run dev
+   ```
 
-**Why enable `allowJs` in the TS template?**
+4. **Build for production**
+   ```bash
+   npm run build
+   ```
 
-While `allowJs: false` would indeed prevent the use of `.js` files in the project, it does not prevent the use of JavaScript syntax in `.svelte` files. In addition, it would force `checkJs: false`, bringing the worst of both worlds: not being able to guarantee the entire codebase is TypeScript, and also having worse typechecking for the existing JavaScript. In addition, there are valid use cases in which a mixed codebase may be relevant.
+##  Deployment (Vercel)
 
-**Why is HMR not preserving my local component state?**
+This project is fully optimized to be deployed on platforms like Vercel or Netlify. 
+Since it is a statically generated Vite/Svelte SPA, Vercel will automatically detect the framework and deploy it in seconds. 
+Just connect your repository and click **Deploy**.
 
-HMR state preservation comes with a number of gotchas! It has been disabled by default in both `svelte-hmr` and `@sveltejs/vite-plugin-svelte` due to its often surprising behavior. You can read the details [here](https://github.com/rixo/svelte-hmr#svelte-hmr).
+## 🤝 Contributing
+Contributions are always welcome! Feel free to open an issue or submit a Pull Request if you want to add new diagnostic tests or improve the UI.
 
-If you have state that's important to retain within a component, consider creating an external store which would not be replaced by HMR.
 
-```ts
-// store.ts
-// An extremely simple external store
-import { writable } from 'svelte/store'
-export default writable(0)
-```
